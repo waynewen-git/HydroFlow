@@ -1,19 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HydroFlow – Legal</title>
+<link rel="icon" type="image/png" href="icon.png">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f2f6ff; color: #1c1c1e; line-height: 1.7; }
-  header { background: linear-gradient(135deg, #007AFF 0%, #0051a8 100%); color: white; padding: 60px 20px 40px; text-align: center; }
-  header .icon { font-size: 56px; margin-bottom: 12px; }
-  header h1 { font-size: 32px; font-weight: 700; letter-spacing: -0.5px; }
-  header p { font-size: 16px; opacity: 0.85; margin-top: 6px; }
+
+  header {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 40px;
+  }
+  header .hero-bg {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+  header .hero-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.45) 100%);
+  }
+  header .hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+  }
+  header .hero-content p {
+    font-size: 16px;
+    opacity: 0.9;
+    margin-top: 6px;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+  }
+
   nav { display: flex; justify-content: center; gap: 12px; padding: 20px; background: white; border-bottom: 1px solid #e5e5ea; position: sticky; top: 0; z-index: 10; flex-wrap: wrap; }
   nav a { text-decoration: none; color: #007AFF; font-weight: 600; font-size: 15px; padding: 8px 20px; border-radius: 20px; border: 1.5px solid #007AFF; transition: all 0.2s; }
   nav a:hover { background: #007AFF; color: white; }
+
+  /* 其余 CSS 不变 */
   main { max-width: 760px; margin: 0 auto; padding: 40px 20px 80px; }
   section { margin-bottom: 48px; }
   section > h2 { font-size: 26px; font-weight: 700; color: #007AFF; margin-bottom: 8px; padding-bottom: 10px; border-bottom: 2px solid #007AFF22; }
@@ -21,13 +55,11 @@
   .card { background: white; border-radius: 16px; padding: 24px; margin-bottom: 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
   .card h3 { font-size: 17px; font-weight: 700; color: #1c1c1e; margin-bottom: 10px; }
   .card p { font-size: 15px; color: #3a3a3c; white-space: pre-line; }
-  .highlight-box { background: #f0f7ff; border-left: 4px solid #007AFF; border-radius: 0 10px 10px 0; padding: 14px 18px; margin-bottom: 16px; font-size: 15px; color: #0051a8; }
   .warning-box { background: #fff8f0; border: 1.5px solid #ff9500aa; border-radius: 12px; padding: 20px 24px; text-align: center; margin-top: 8px; }
   .warning-box h3 { color: #ff9500; font-size: 16px; margin-bottom: 8px; }
   .warning-box p { font-size: 14px; color: #5a4a3a; }
   .contact-card { background: #f2f6ff; border-radius: 12px; padding: 20px 24px; margin-top: 8px; }
   .contact-card a { color: #007AFF; text-decoration: none; font-weight: 500; }
-  .contact-card a:hover { text-decoration: underline; }
   footer { text-align: center; padding: 32px 20px; color: #8e8e93; font-size: 13px; }
   footer a { color: #007AFF; text-decoration: none; }
 </style>
@@ -35,9 +67,11 @@
 <body>
 
 <header>
-  <div class="icon">💧</div>
-  <h1>HydroFlow</h1>
-  <p>Stay hydrated. Track your journey.</p>
+  <img src="background.png" alt="HydroFlow background" class="hero-bg">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p>Privacy Policy &amp; Terms of Service</p>
+  </div>
 </header>
 
 <nav>
