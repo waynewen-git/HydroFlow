@@ -3,97 +3,213 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HydroFlow - Legal</title>
+<title>HydroFlow – Legal</title>
 <style>
-  body { font-family: -apple-system, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; line-height: 1.7; }
-  h1 { color: #0080ff; }
-  h2 { margin-top: 30px; border-bottom: 1px solid #eee; padding-bottom: 8px; }
-  h3 { margin-top: 24px; color: #555; }
-  a { color: #0080ff; }
-  .section { margin-bottom: 60px; }
-  nav { background: #f5f5f5; padding: 16px 20px; border-radius: 10px; margin-bottom: 40px; }
-  nav a { margin-right: 20px; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #f2f6ff;
+    color: #1c1c1e;
+    line-height: 1.7;
+  }
+
+  header {
+    background: linear-gradient(135deg, #007AFF 0%, #0051a8 100%);
+    color: white;
+    padding: 60px 20px 40px;
+    text-align: center;
+  }
+
+  header .icon { font-size: 56px; margin-bottom: 12px; }
+  header h1 { font-size: 32px; font-weight: 700; letter-spacing: -0.5px; }
+  header p { font-size: 16px; opacity: 0.85; margin-top: 6px; }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    padding: 20px;
+    background: white;
+    border-bottom: 1px solid #e5e5ea;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #007AFF;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: 1.5px solid #007AFF;
+    transition: all 0.2s;
+  }
+
+  nav a:hover {
+    background: #007AFF;
+    color: white;
+  }
+
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+  }
+
+  section {
+    background: white;
+    border-radius: 16px;
+    padding: 36px;
+    margin-bottom: 32px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  }
+
+  section > h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #007AFF;
+    margin-bottom: 6px;
+  }
+
+  .effective-date {
+    font-size: 13px;
+    color: #8e8e93;
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f2f2f7;
+  }
+
+  h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1c1c1e;
+    margin: 24px 0 8px;
+  }
+
+  p { font-size: 15px; color: #3a3a3c; }
+
+  .highlight-box {
+    background: #f0f7ff;
+    border-left: 4px solid #007AFF;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 18px;
+    margin: 20px 0;
+    font-size: 15px;
+    color: #0051a8;
+    font-weight: 500;
+  }
+
+  .contact-card {
+    background: #f2f6ff;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-top: 24px;
+  }
+
+  .contact-card p { margin-bottom: 6px; }
+
+  .contact-card a {
+    color: #007AFF;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .contact-card a:hover { text-decoration: underline; }
+
+  footer {
+    text-align: center;
+    padding: 32px 20px;
+    color: #8e8e93;
+    font-size: 13px;
+  }
+
+  footer a { color: #007AFF; text-decoration: none; }
 </style>
 </head>
 <body>
 
-<h1>💧 HydroFlow Legal</h1>
+<header>
+  <div class="icon">💧</div>
+  <h1>HydroFlow</h1>
+  <p>Stay hydrated. Track your journey.</p>
+</header>
+
 <nav>
   <a href="#privacy">Privacy Policy</a>
   <a href="#terms">Terms of Service</a>
 </nav>
 
-<!-- PRIVACY POLICY -->
-<div class="section" id="privacy">
-<h1>Privacy Policy</h1>
-<p><strong>Last updated: July 3, 2026</strong></p>
-<p>HydroFlow ("we", "our", or "us") is committed to protecting your privacy.</p>
+<main>
 
-<h2>Information We Collect</h2>
-<p>HydroFlow does <strong>not</strong> collect or transmit any personal data to external servers. All data is stored locally on your device.</p>
-<ul>
-  <li><strong>Hydration data</strong>: Stored locally, optionally synced to Apple Health.</li>
-  <li><strong>Health data</strong>: With your permission, we read and write water intake to Apple Health (HealthKit). This data never leaves your device or Apple's ecosystem.</li>
-  <li><strong>Notification preferences</strong>: Stored locally on your device.</li>
-  <li><strong>App preferences</strong>: Settings such as daily goal, beverage types, and language are stored locally.</li>
-</ul>
+  <section id="privacy">
+    <h2>Privacy Policy</h2>
+    <p class="effective-date">Effective Date: July 3, 2026</p>
 
-<h2>Data We Do NOT Collect</h2>
-<ul>
-  <li>We do not collect names, email addresses, or contact information.</li>
-  <li>We do not use third-party analytics or advertising SDKs.</li>
-  <li>We do not track your location.</li>
-  <li>We do not share any data with third parties.</li>
-</ul>
+    <div class="highlight-box">
+      🔒 HydroFlow collects zero personal data. Everything stays on your device.
+    </div>
 
-<h2>Apple Health (HealthKit)</h2>
-<p>HydroFlow requests optional access to HealthKit to read and write water intake data. This integration is entirely optional. HealthKit data is governed by Apple's own privacy policy and remains within Apple's ecosystem.</p>
+    <h3>No Data Collection</h3>
+    <p>HydroFlow does not collect, store, or transmit any personal data to external servers. All your hydration records, mood entries, and goals stay entirely on your device.</p>
 
-<h2>In-App Purchases</h2>
-<p>Purchase transactions are handled entirely by Apple's App Store. We do not collect or store any payment information.</p>
+    <h3>Local Storage Only</h3>
+    <p>All data is stored locally using Apple's frameworks. We have no access to your data — ever.</p>
 
-<h2>Notifications</h2>
-<p>With your permission, we send local push notifications to remind you to drink water. These notifications are generated entirely on your device and no data is sent to any server.</p>
+    <h3>Apple Health</h3>
+    <p>If you enable Apple Health sync, data is shared only with the Health app on your own device. We never see or store this data.</p>
 
-<h2>Children's Privacy</h2>
-<p>HydroFlow does not knowingly collect any information from children under 13.</p>
+    <h3>Notifications</h3>
+    <p>Hydration reminders use Apple's local notification system. No data leaves your device.</p>
 
-<h2>Changes to This Policy</h2>
-<p>We may update this policy occasionally. Continued use of the app after changes constitutes acceptance of the new policy.</p>
+    <h3>In-App Purchases</h3>
+    <p>HydroFlow uses Apple's StoreKit for Pro purchases. Apple handles all payment processing — we receive no financial or personal data.</p>
 
-<h2>Contact Us</h2>
-<p>Email: <a href="mailto:hydroflowapp@gmail.com">hydroflowapp@gmail.com</a></p>
-</div>
+    <div class="contact-card">
+      <p><strong>Contact Us</strong></p>
+      <p>📧 <a href="mailto:hydroflowapp@gmail.com">hydroflowapp@gmail.com</a></p>
+      <p>🌐 <a href="https://waynewen-git.github.io/HydroFlow">waynewen-git.github.io/HydroFlow</a></p>
+    </div>
+  </section>
 
-<!-- TERMS OF SERVICE -->
-<div class="section" id="terms">
-<h1>Terms of Service</h1>
-<p><strong>Last updated: July 3, 2026</strong></p>
+  <section id="terms">
+    <h2>Terms of Service</h2>
+    <p class="effective-date">Effective Date: July 3, 2026</p>
 
-<h2>1. Acceptance of Terms</h2>
-<p>By downloading or using HydroFlow, you agree to these Terms of Service.</p>
+    <h3>Acceptance</h3>
+    <p>By downloading or using HydroFlow, you agree to these Terms of Service.</p>
 
-<h2>2. Description of Service</h2>
-<p>HydroFlow is a personal hydration tracking application for general wellness purposes only. It is not a medical device.</p>
+    <h3>License</h3>
+    <p>We grant you a personal, non-commercial, non-transferable license to use HydroFlow on Apple devices you own or control.</p>
 
-<h2>3. Health Disclaimer</h2>
-<p>HydroFlow does not provide medical advice. Always consult a qualified healthcare professional for medical advice, diagnosis, or treatment.</p>
+    <h3>Pro Features</h3>
+    <p>Pro features are unlocked via a one-time in-app purchase. All purchases are final. Refunds are subject to Apple's refund policy.</p>
 
-<h2>4. In-App Purchases</h2>
-<p>HydroFlow offers a one-time Pro purchase processed by Apple's App Store. Purchases are non-refundable except as required by Apple's refund policies. Pro features are permanently unlocked for your Apple ID.</p>
+    <h3>Health Disclaimer</h3>
+    <div class="highlight-box">
+      ⚠️ HydroFlow is a wellness tracking tool, not a medical device. Always consult a healthcare professional for medical advice.
+    </div>
 
-<h2>5. Intellectual Property</h2>
-<p>All content within HydroFlow is protected by applicable copyright laws. You may not reproduce or distribute any part without permission.</p>
+    <h3>Limitation of Liability</h3>
+    <p>HydroFlow is provided "as is" without warranties of any kind. We are not liable for any damages arising from use of the app.</p>
 
-<h2>6. Limitation of Liability</h2>
-<p>The App is provided "as is" without warranties of any kind. We are not liable for any damages arising from your use of the App.</p>
+    <h3>Changes to Terms</h3>
+    <p>We may update these terms from time to time. Continued use of the app after changes constitutes your acceptance of the new terms.</p>
 
-<h2>7. Changes to Terms</h2>
-<p>We may update these terms from time to time. Continued use of the App constitutes acceptance of the updated terms.</p>
+    <div class="contact-card">
+      <p><strong>Contact Us</strong></p>
+      <p>📧 <a href="mailto:hydroflowapp@gmail.com">hydroflowapp@gmail.com</a></p>
+      <p>🌐 <a href="https://waynewen-git.github.io/HydroFlow">waynewen-git.github.io/HydroFlow</a></p>
+    </div>
+  </section>
 
-<h2>8. Contact</h2>
-<p>Email: <a href="mailto:hydroflowapp@gmail.com">hydroflowapp@gmail.com</a></p>
-</div>
+</main>
+
+<footer>
+  <p>© 2026 HydroFlow · <a href="mailto:hydroflowapp@gmail.com">hydroflowapp@gmail.com</a></p>
+</footer>
 
 </body>
 </html>
