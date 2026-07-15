@@ -8,7 +8,6 @@
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
-  /* 全页面背景 */
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     color: #1c1c1e;
@@ -21,7 +20,6 @@
     background-repeat: no-repeat;
   }
 
-  /* 全页面半透明深色蒙层，让内容可读 */
   body::before {
     content: '';
     position: fixed;
@@ -32,7 +30,6 @@
     pointer-events: none;
   }
 
-  /* Header */
   header {
     position: relative;
     z-index: 1;
@@ -63,7 +60,6 @@
     text-shadow: 0 1px 4px rgba(0,0,0,0.4);
   }
 
-  /* 导航栏 */
   nav {
     position: sticky;
     top: 0;
@@ -93,7 +89,6 @@
     background: rgba(255,255,255,0.25);
   }
 
-  /* 主内容区 */
   main {
     position: relative;
     z-index: 1;
@@ -120,7 +115,6 @@
     margin-bottom: 24px;
   }
 
-  /* 玻璃卡片 */
   .card {
     background: rgba(255,255,255,0.12);
     backdrop-filter: blur(16px);
@@ -143,13 +137,6 @@
   }
   .card a { color: #7dd3fc; }
 
-  /* 警告卡片 */
-  .card.warning {
-    border-left: 4px solid #ff6b35;
-    background: rgba(255,100,50,0.15);
-  }
-
-  /* 重要声明 */
   .warning-box {
     background: rgba(255,149,0,0.2);
     border: 1.5px solid rgba(255,149,0,0.6);
@@ -161,7 +148,6 @@
   .warning-box h3 { color: #ffd060; font-size: 16px; margin-bottom: 8px; }
   .warning-box p { font-size: 14px; color: rgba(255,255,255,0.85); }
 
-  /* 联系卡片 */
   .contact-card {
     background: rgba(255,255,255,0.1);
     border-radius: 12px;
@@ -171,7 +157,6 @@
   .contact-card a { color: #7dd3fc; text-decoration: none; font-weight: 500; }
   .contact-card a:hover { text-decoration: underline; }
 
-  /* Footer */
   footer {
     position: relative;
     z-index: 1;
@@ -201,17 +186,20 @@
 <!-- ======================== PRIVACY POLICY ======================== -->
 <section id="privacy">
   <h2>Privacy Policy</h2>
-  <p class="effective-date">Last Updated: June 8, 2026</p>
+  <p class="effective-date">Last Updated: July 15, 2026</p>
 
   <div class="card">
     <h3>Information We Collect</h3>
     <p>HydroFlow is designed with your privacy in mind. The app collects and stores the following data locally on your device:
 
-• Water intake records (date, amount, beverage type)
+• Water intake records (date, amount, beverage type, hydration equivalent)
+• Estimated caffeine intake (for caffeinated beverages)
 • Daily hydration goals and preferences
-• Mood notes (optional)
+• Body profile (height, weight, optional auto-goal calculation)
+• Mood notes (optional; text notes require Pro)
 • Reminder settings
 • Achievement data
+• Pro purchase status (verified locally via Apple StoreKit)
 
 All data is stored locally using iOS UserDefaults and is NOT transmitted to any external servers.</p>
   </div>
@@ -251,9 +239,10 @@ We do not sell, share, or transmit your personal data to any third parties.</p>
 
   <div class="card">
     <h3>Analytics and Diagnostics</h3>
-    <p>HydroFlow may collect anonymous crash logs and diagnostic information to improve app stability and performance. This data:
+    <p>HydroFlow does not integrate third-party analytics or advertising SDKs. The app may rely on Apple's system-level diagnostic services (such as anonymous crash reports submitted through iOS when you opt in). This data:
 
 • Does not contain personally identifiable information
+• Is collected only through Apple's platform, not by HydroFlow directly
 • Is used solely for debugging and improvement
 • Is handled according to Apple's privacy standards
 
@@ -262,9 +251,10 @@ You can disable analytics in iOS Settings &gt; Privacy &amp; Security &gt; Analy
 
   <div class="card">
     <h3>Apple Health Integration</h3>
-    <p>If you enable Apple Health integration in Settings, HydroFlow will sync your water intake and caffeine intake records to the Health app on your device.
+    <p>If you enable Apple Health integration in Settings, HydroFlow will sync your water intake and caffeine intake records to the Health app on your device, and may read today's water intake from Health for display purposes.
 
-• Data synced: Water intake amount, beverage type, and caffeine content
+• Data written: Water intake amount, beverage type, and caffeine content
+• Data read: Dietary water intake (today's total, when authorized)
 • Storage: Stored locally on your device within the Health app
 • No data is transmitted to external servers through this integration
 • You can revoke access at any time: Settings &gt; Health &gt; Data Access &amp; Devices</p>
@@ -282,15 +272,26 @@ We only verify your purchase status locally through Apple's StoreKit framework.<
   </div>
 
   <div class="card">
-    <h3>Intellectual Property &amp; AI-Generated Content</h3>
-    <p>All images, videos, and visual assets used in HydroFlow are:
+    <h3>Sharing</h3>
+    <p>HydroFlow lets you voluntarily share rendered images (such as daily progress cards or ocean creature cards) through the iOS system share sheet. Sharing is always initiated by you. We do not receive or store shared content on our servers.</p>
+  </div>
 
-• Created by AI tools under the direction of the app creator
-• Original works that do not infringe any third-party intellectual property rights
-• Licensed exclusively for use in HydroFlow
-• Protected by applicable copyright laws
+  <div class="card">
+    <h3>Third-Party &amp; Licensed Content</h3>
+    <p>HydroFlow includes media from multiple sources. The app itself does not upload your personal data to these providers.
 
-The creator retains all rights to these AI-generated materials. No third-party copyrighted content is used without proper authorization.</p>
+Visual assets:
+• Some PNG images are sourced from Pexels under the Pexels License (free for commercial use)
+• Other PNG images and background videos are created by the developer using AI tools
+• AI-generated and original assets are used exclusively within HydroFlow
+
+Sound effects (Freesound.org):
+• Button tap sound — "bubble1.wav" by Godowan (CC BY — attribution required)
+  <a href="https://freesound.org/people/Godowan/sounds/235264/">https://freesound.org/people/Godowan/sounds/235264/</a>
+• Celebration sound — "FX_006" by ANARKYA (CC0 1.0 — public domain)
+  <a href="https://freesound.org/people/ANARKYA/sounds/459568/">https://freesound.org/people/ANARKYA/sounds/459568/</a>
+
+Full attribution details are available in Settings &gt; About &amp; Support &gt; Open Source Licenses.</p>
   </div>
 
   <div class="card">
@@ -305,7 +306,7 @@ The creator retains all rights to these AI-generated materials. No third-party c
 • Access: All your data is visible within the app
 • Modify: Edit or delete records at any time
 • Delete: Uninstalling the app permanently removes all data
-• Export: Share your data through the app's export feature (if available)</p>
+• Share: Export rendered summary images via the iOS share sheet (user-initiated)</p>
   </div>
 
   <div class="card">
@@ -326,7 +327,7 @@ The creator retains all rights to these AI-generated materials. No third-party c
 <!-- ======================== TERMS OF SERVICE ======================== -->
 <section id="terms">
   <h2>Terms of Service</h2>
-  <p class="effective-date">Effective Date: March 11, 2026 &nbsp;·&nbsp; Last Updated: March 11, 2026</p>
+  <p class="effective-date">Effective Date: March 11, 2026 &nbsp;·&nbsp; Last Updated: July 15, 2026</p>
 
   <div class="card">
     <h3>Acceptance of Terms</h3>
@@ -337,11 +338,17 @@ The creator retains all rights to these AI-generated materials. No third-party c
     <h3>Description of Service</h3>
     <p>HydroFlow is a health and fitness application designed to help users track their daily water intake and maintain healthy hydration habits. The App provides:
 
-• Water intake tracking and logging
-• Customizable hydration goals
-• Reminder notifications
-• Progress statistics and analytics
-• Achievement tracking
+• Water intake tracking and logging with beverage-type selection
+• Hydration equivalent percentages for different beverages (general reference values)
+• Customizable daily goals, cup size, and optional body-profile-based auto-goal calculation
+• Reminder notifications (fixed, smart, and rolling schedules; some require Pro)
+• Progress statistics, history, and analytics
+• Achievement tracking and ocean creature collection
+• Living Ocean background experience and celebration animations
+• Optional mood diary (mood selection is free; written notes require Pro)
+• Shareable progress and creature cards via the iOS share sheet
+• Optional Apple Health sync
+• One-time Pro upgrade unlocking additional features
 
 The App is provided "as is" for informational and motivational purposes only.</p>
   </div>
@@ -351,7 +358,8 @@ The App is provided "as is" for informational and motivational purposes only.</p
     <p>IMPORTANT: HydroFlow is NOT a medical device and should NOT be used for medical diagnosis or treatment.
 
 • The App provides general hydration tracking only
-• Hydration recommendations are generic and may not suit everyone
+• Hydration recommendations and beverage equivalent percentages are generic reference values and may not suit everyone
+• Beverage hydration percentages (including alcohol and caffeine-containing drinks) are for tracking convenience only, not medical or nutritional advice
 • Always consult a healthcare professional for medical advice
 • Individual hydration needs vary based on health, activity, climate, etc.
 • Do not rely solely on this App for health-related decisions
@@ -368,6 +376,15 @@ By using this App, you acknowledge that it is not a substitute for professional 
 • Take responsibility for your own health and hydration decisions
 • Not attempt to reverse engineer, modify, or hack the App
 • Not use the App for any unauthorized commercial purposes</p>
+  </div>
+
+  <div class="card">
+    <h3>Sharing</h3>
+    <p>HydroFlow allows you to share rendered images (such as daily progress cards or ocean creature cards) through the iOS system share sheet. Sharing is entirely voluntary and initiated by you.
+
+• We do not control how you share content on external platforms
+• We are not responsible for content you choose to publish outside the App
+• Shared images may include your hydration statistics; review content before sharing</p>
   </div>
 
   <div class="card">
@@ -393,7 +410,21 @@ Refund Policy:
 You may not:
 • Copy, modify, or distribute the App or its content
 • Use the App's name, logo, or branding without permission
-• Create derivative works based on the App</p>
+• Create derivative works based on the App
+• Extract, redistribute, or resell individual assets (images, videos, or sounds) from the App</p>
+  </div>
+
+  <div class="card">
+    <h3>Third-Party Content</h3>
+    <p>HydroFlow incorporates licensed third-party materials:
+
+• Images: Some PNG assets from Pexels (Pexels License); others are AI-generated by the developer
+• Video: Background ocean videos are AI-generated by the developer
+• Sound effects from Freesound.org:
+  – "bubble1.wav" by Godowan (CC BY) — used as button tap sound
+  – "FX_006" by ANARKYA (CC0) — used as celebration sound
+
+These materials are used in compliance with their respective licenses. Attribution details are listed in Settings &gt; About &amp; Support &gt; Open Source Licenses.</p>
   </div>
 
   <div class="card">
@@ -418,7 +449,7 @@ Key points:
 • We do not transmit your personal data to external servers
 • You control your own data
 
-For full details, please read our <a href="#privacy" style="color:#007AFF">Privacy Policy</a>.</p>
+For full details, please read our <a href="#privacy">Privacy Policy</a>.</p>
   </div>
 
   <div class="card">
@@ -446,9 +477,9 @@ Upon termination, all provisions of these Terms which by their nature should sur
 
   <div class="card">
     <h3>Governing Law</h3>
-    <p>These Terms shall be governed by and construed in accordance with the laws of your jurisdiction, without regard to conflict of law principles.
+    <p>These Terms shall be governed by and construed in accordance with applicable laws in the jurisdiction where the App developer operates, without regard to conflict of law principles.
 
-Any disputes arising from these Terms or use of the App shall be resolved through binding arbitration or in courts of competent jurisdiction.</p>
+Any disputes arising from these Terms or use of the App shall first be attempted to be resolved through good-faith contact at hydroflowapp@gmail.com. If unresolved, disputes shall be submitted to courts or arbitration bodies of competent jurisdiction as required by applicable law.</p>
   </div>
 
   <div class="card">
